@@ -1,0 +1,137 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "OpenCode Kiro Auth",
+  "projectDescription": "OpenCode plugin for AWS Kiro providing multi-account Claude access with intelligent rotation and quota management",
+  "theme": "aspen",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "auth/overview",
+              "auth/builder-id",
+              "auth/identity-center",
+              "auth/kiro-cli-sync"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/overview",
+              "configuration/opencode-config",
+              "configuration/plugin-config",
+              "configuration/models"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/account-rotation",
+              "features/usage-tracking",
+              "features/token-management",
+              "features/error-handling"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/thinking-mode",
+              "advanced/context-truncation",
+              "advanced/multi-account-setup",
+              "advanced/storage"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-errors",
+              "troubleshooting/authentication",
+              "troubleshooting/debugging"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Core Exports",
+            "pages": [
+              "api/kiro-oauth-plugin",
+              "api/create-kiro-plugin",
+              "api/authorize-kiro-idc"
+            ]
+          },
+          {
+            "group": "Types",
+            "pages": [
+              "api/types/kiro-config",
+              "api/types/kiro-auth-details",
+              "api/types/managed-account",
+              "api/types/kiro-region"
+            ]
+          },
+          {
+            "group": "Account Management",
+            "pages": [
+              "api/account-manager",
+              "api/account-selector",
+              "api/usage-tracker"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth-handler",
+              "api/idc-auth-method",
+              "api/token-refresher"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-account rotation with intelligent quota-based selection",
+    "Multiple authentication methods (AWS Builder ID, IAM Identity Center, Kiro CLI)",
+    "Automatic Kiro CLI session synchronization",
+    "Gradual context truncation for error 400 prevention",
+    "Native Claude thinking mode support with configurable budgets",
+    "High-performance SQLite-based account and usage management",
+    "Automated token refresh and exponential backoff for rate limits",
+    "Support for Claude Sonnet, Opus, Haiku, and extended context models"
+  ],
+  "publicApiSurface": [
+    "KiroOAuthPlugin",
+    "createKiroPlugin(id: string)",
+    "authorizeKiroIDC(region?: KiroRegion, startUrl?: string)",
+    "KiroConfig",
+    "KiroAuthDetails",
+    "KiroAuthMethod",
+    "KiroRegion",
+    "ManagedAccount",
+    "AccountManager",
+    "AccountSelector",
+    "AuthHandler",
+    "IdcAuthMethod",
+    "TokenRefresher",
+    "UsageTracker",
+    "RequestHandler",
+    "syncFromKiroCli()",
+    "resolveKiroModel(model: string)"
+  ]
+}
